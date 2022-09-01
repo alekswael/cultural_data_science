@@ -1,0 +1,43 @@
+---
+title: "Start_with_R"
+author: "Aleksander Wael"
+date: "9/1/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load(tidyverse)
+```
+
+```{r}
+rooms <- c(1, 2, 4, 5, 1, 3, 1, NA, 3, 1, 3, 2, 1, NA, 1, 8, 3, 1, 4, NA, 1, 3, 1, 2, 1, 7, 1, 9, 3, NA)
+```
+
+```{r}
+rooms_larger_2 <- rooms[rooms>2]
+```
+
+```{r}
+length(rooms_larger_2)
+```
+#### There are 16 elements greater than 2.
+
+```{r}
+rooms_larger_2_no_na <- na.omit(rooms_larger_2)
+sum(rooms_larger_2_no_na)
+```
+#### The sum of the vector is 55.
+
+```{r}
+typeof(rooms)
+```
+
+```{r}
+pacman::p_load(tidyverse)
+
+# I get an error when running the download.file() function, so i downloaded it and 
+
+interviews <- read_csv("SAFI_clean.csv")
+```
+
